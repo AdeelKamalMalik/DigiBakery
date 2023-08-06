@@ -1,0 +1,9 @@
+<h3>My Ovens</h3>
+
+<ul class="ovens">
+  <% @ovens.each do |oven| %>
+    <li>
+      <%= link_to oven.name, oven %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,7 @@
+<div id="cookies<%= cookie.id %>">
+  <span>1 cookie with <%= cookie.fillings || "no fillings" %>
+    <% if cookie.ready? %>
+      (Your Cookie is Ready)
+    <% end %>
+  </span>
+</div>

@@ -1,0 +1,34 @@
+<h3>New Cookie for oven '<%= @oven.name %>'</h3>
+
+<%= form_for [@oven, @cookie], url: bulk_create_oven_cookies_path do |f| %>
+  <div class="row">
+    <div class="small-8 columns">
+      <%= f.label :fillings %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="small-8 columns">
+      <%= f.text_field :fillings, required: true %>
+    </div>
+  </div>
+
+
+  <div class="row mt-2">
+    <div class="small-8 columns">
+      <%= f.label 'How many cookies needs to be prepared' %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="small-8 columns">
+      <%= number_field_tag :no_of_cookies, nil, required: true, min: 1 %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-8 columns">
+      <%= f.submit 'Mix and bake', class: 'button' %>
+    </div>
+  </div>
+<% end %>

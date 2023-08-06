@@ -1,0 +1,16 @@
+<h3><%= @oven.name %></h3>
+
+<div class="cookie-info">
+  Cookies in oven:
+  <% if @oven.cookies.present? %>
+    <%= render partial: 'cookies/cookie', collection: @oven.cookies, as: :cookie %>
+  <% else %>
+    None
+  <% end %>
+</div>
+
+<br/>
+
+<div id="oven<%= @oven.id %>actions">
+  <%= render partial: 'ovens/actions', locals: { oven: @oven } %>
+</div>

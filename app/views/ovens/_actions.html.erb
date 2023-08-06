@@ -1,0 +1,4 @@
+<%= button_to "Retrieve Cookie", empty_oven_path(oven), class: 'button tiny', disabled: !(!oven.busy && oven.cookies.present?) %>
+<br />
+
+<%= button_to "Prepare Cookie", new_oven_cookies_path(oven), class: 'button', disabled: !oven.cookies.blank?, method: :get %>
